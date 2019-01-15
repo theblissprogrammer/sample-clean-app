@@ -1,12 +1,12 @@
 package com.theblissprogrammer.boubyanbank.test.common.app.services
 
+import android.app.Activity
 import android.content.Intent
 import com.theblissprogrammer.boubyanbank.businesslogic.account.AuthenticationWorkerType
 import com.theblissprogrammer.boubyanbank.businesslogic.dependencies.HasDependencies
 import com.theblissprogrammer.boubyanbank.businesslogic.preferences.ConstantsType
 import com.theblissprogrammer.boubyanbank.businesslogic.protocols.AuthenticationServiceDelegate
 import com.theblissprogrammer.boubyanbank.businesslogic.ui.ApplicationService
-import com.theblissprogrammer.boubyanbank.test.common.activities.BaseActivity
 import com.theblissprogrammer.boubyanbank.test.common.activities.BaseLoginActivity
 import com.theblissprogrammer.boubyanbank.test.common.activities.MainActivity
 

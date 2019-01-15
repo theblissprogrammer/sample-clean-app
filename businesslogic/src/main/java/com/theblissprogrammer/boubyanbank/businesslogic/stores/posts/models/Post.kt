@@ -10,19 +10,8 @@ import com.theblissprogrammer.boubyanbank.businesslogic.stores.users.models.User
  * Created by ahmedsaad on 2019-01-14.
  * Copyright © 2019. All rights reserved.
  */
-@Entity(
-    foreignKeys = [
-        ForeignKey(
-            entity = User::class,
-            parentColumns = ["id"],
-            childColumns = ["userId"],
-            onDelete = ForeignKey.CASCADE
-        )
-    ],
-    indices = [
-        Index(value = ["userId"])
-    ])
- data class Post(
+@Entity
+data class Post(
     @PrimaryKey
     val id: Int = -1,
     val userId: Int = -1,
