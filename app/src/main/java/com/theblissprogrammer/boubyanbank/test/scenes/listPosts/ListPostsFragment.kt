@@ -67,7 +67,6 @@ class ListPostsFragment : BaseFragment(), ListPostsDisplayable, HasDependencies,
     }
 
     private fun loadData() {
-        spinner.showSpinner()
         userId?.let {
             interactor.fetchPosts(it)
         }
@@ -76,9 +75,6 @@ class ListPostsFragment : BaseFragment(), ListPostsDisplayable, HasDependencies,
     override fun displayFetchedPosts(viewModel: ListPostsModels.ViewModel) {
         // Create the observer which updates the UI.
         val observer = Observer<List<ListPostsModels.PostViewModel>> {
-            if (it.isNotEmpty())
-                spinner.hideSpinner()
-
             adapter.reloadData(it)
         }
 

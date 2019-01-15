@@ -57,8 +57,6 @@ class ShowPostFragment : BaseFragment(), ShowPostDisplayable, HasDependencies {
     }
 
     private fun loadData() {
-        spinner.showSpinner()
-
         val userId = userId ?: return
         val id = id ?: return
 
@@ -68,9 +66,6 @@ class ShowPostFragment : BaseFragment(), ShowPostDisplayable, HasDependencies {
     override fun displayFetchedPost(viewModel: ShowPostModels.ViewModel) {
         // Create the observer which updates the UI.
         val observer = Observer<ShowPostModels.PostViewModel> {
-            if (it.title.isNotEmpty())
-                spinner.hideSpinner()
-
             titleTextView.text = it.title
             descriptionTextView.text = it.description
         }

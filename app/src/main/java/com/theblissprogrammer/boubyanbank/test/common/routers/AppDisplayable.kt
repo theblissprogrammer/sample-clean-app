@@ -11,7 +11,6 @@ interface AppDisplayable {
     fun display(error: AppModels.Error) {
         when (this) {
             is BaseFragment -> {
-                spinner?.hideSpinner()
                 this.present(title = error.title, message = error.message)
             }
             else -> {}

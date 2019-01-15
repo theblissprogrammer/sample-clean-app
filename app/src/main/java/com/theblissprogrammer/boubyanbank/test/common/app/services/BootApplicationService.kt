@@ -26,7 +26,8 @@ class BootApplicationService: ApplicationService, HasDependencies, Authenticatio
 
     override fun onCreate() {
         // Linked to MainActivity onResume & onPause
-        if (!authenticationWorker.isAuthorized) {
+        // Always logout for testing
+        if (/*!authenticationWorker.isAuthorized*/true) {
             val intent = Intent(context, BaseLoginActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
