@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Boubyan Business Logic</string>
+    <string name="base_url_debug">https://jsonplaceholder.typicode.com</string>
+    <string name="base_url">https://jsonplaceholder.typicode.com</string>
+    <string name="base_rest_path"/> <!-- Used to include path components ex. api/v1/... -->
+    <string name="email_user_admin_debug">ahmed.saad@outlook.com</string>
+    <string name="email_user_admin">info@boubyanbank.com</string>
+</resources>

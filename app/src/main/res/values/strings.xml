@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Boubyan Test</string>
+    <string name="loading">Loading…</string>
+    <string name="search">Search…</string>
+    <string name="hide_snackbar">Hide</string>
+    <string name="list_users_title">Users</string>
+
+    <string name="error_title">Error</string>
+    <string name="login_error_title">Login Error</string>
+    <string name="unauthorized_error_message">You must log in to view this content. Please log in or sign up.</string>
+    <string name="duplicate_failure_error_message">The data you submitted already exists.</string>
+    <string name="network_failure_error_message">An unexpected network error has occurred.</string>
+    <string name="non_existent_error_message">No data was found for your request.</string>
+    <string name="parse_failure_error_message">The response from the server could not be read.</string>
+    <string name="database_failure_error_message">An unexpected database error has occurred.</string>
+    <string name="cache_failure_error_message">An unexpected error has occurred with the local database, but may have succeeded in the cloud.</string>
+    <string name="no_internet_error_message">No internet connection is available.</string>
+    <string name="bad_network_request_error_message">The server did not recognize your request.</string>
+    <string name="data_error_message">There was an error with your request.</string>
+    <string name="field_prefix">Field \"%1$s\"</string>
+
+    <string name="username_placeholder">username</string>
+    <string name="password_placeholder">password</string>
+    <string name="login_button">Login</string>
+</resources>

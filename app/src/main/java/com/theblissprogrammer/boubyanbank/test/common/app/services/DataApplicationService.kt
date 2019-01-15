@@ -1,0 +1,20 @@
+package com.theblissprogrammer.boubyanbank.test.common.app.services
+
+import com.theblissprogrammer.boubyanbank.businesslogic.data.DataWorkerType
+import com.theblissprogrammer.boubyanbank.businesslogic.ui.ApplicationService
+import com.theblissprogrammer.boubyanbank.businesslogic.dependencies.HasDependencies
+
+/**
+ * Created by ahmedsaad on 2019-01-14.
+ * Copyright © 2019. All rights reserved.
+ */
+class DataApplicationService: ApplicationService, HasDependencies {
+
+    private val dataWorker: DataWorkerType by lazy {
+        dependencies.resolveDataWorker
+    }
+
+    override fun onCreate() {
+        dataWorker.configure()
+    }
+}
