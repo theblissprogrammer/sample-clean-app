@@ -39,36 +39,36 @@ open class PluggableApplication: Application.ActivityLifecycleCallbacks, Applica
         services.forEach { it.onTerminate() }
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration?) {
+    override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         services.forEach { it.onConfigurationChanged(newConfig) }
     }
 
-    override fun onActivityPaused(p0: Activity?) {
+    override fun onActivityPaused(p0: Activity) {
         services.forEach { it.onActivityPaused(p0) }
     }
 
-    override fun onActivityResumed(p0: Activity?) {
+    override fun onActivityResumed(p0: Activity) {
         services.forEach { it.onActivityResumed(p0) }
     }
 
-    override fun onActivityStarted(p0: Activity?) {
+    override fun onActivityStarted(p0: Activity) {
         services.forEach { it.onActivityStarted(p0) }
     }
 
-    override fun onActivityDestroyed(p0: Activity?) {
+    override fun onActivityDestroyed(p0: Activity) {
         services.forEach { it.onActivityDestroyed(p0) }
     }
 
-    override fun onActivitySaveInstanceState(p0: Activity?, p1: Bundle?) {
+    override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
         services.forEach { it.onActivitySaveInstanceState(p0, p1) }
     }
 
-    override fun onActivityStopped(p0: Activity?) {
+    override fun onActivityStopped(p0: Activity) {
         services.forEach { it.onActivityStopped(p0) }
     }
 
-    override fun onActivityCreated(p0: Activity?, p1: Bundle?) {
+    override fun onActivityCreated(p0: Activity, p1: Bundle?) {
         services.forEach { it.onActivityCreated(p0, p1) }
     }
 }

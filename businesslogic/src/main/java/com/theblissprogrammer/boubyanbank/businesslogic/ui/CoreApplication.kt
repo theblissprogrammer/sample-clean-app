@@ -41,20 +41,20 @@ open class CoreApplication: PluggableApplication() {
                 .unregisterReceiver(broadcastReceiver)
     }
 
-    fun authenticationDidLogin(userID: String) {
-        if (userID.isEmpty()) return
+    fun authenticationDidLogin(userID: String?) {
+        if (userID.isNullOrBlank()) return
         services.mapNotNull { it as? AuthenticationServiceDelegate }
                 .forEach { it.authenticationDidLogin(userID = userID) }
     }
 
-    fun authenticationDidLogout(userID: String) {
-        if (userID.isEmpty()) return
+    fun authenticationDidLogout(userID: String?) {
+        if (userID.isNullOrBlank()) return
         services.mapNotNull { it as? AuthenticationServiceDelegate }
                 .forEach { it.authenticationDidLogout(userID = userID) }
     }
 
-    fun onTokenRefresh(deviceToken: String) {
-        if (deviceToken.isEmpty()) return
+    fun onTokenRefresh(deviceToken: String?) {
+        if (deviceToken.isNullOrBlank()) return
         services.mapNotNull { it as? PushNotificationServiceDelegate }
                 .forEach { it.onTokenRefresh(deviceToken = deviceToken) }
     }

@@ -13,7 +13,7 @@ enum class Environment {
     PRODUCTION;
     companion object {
         var mode: Environment = {
-            if (BuildConfig.FLAVOR.equals("dev"))
+            if (BuildConfig.BUILD_TYPE.equals("debug"))
                 DEVELOPMENT
             else
                 PRODUCTION

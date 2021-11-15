@@ -18,11 +18,11 @@ open class BaseActivity: AppCompatActivity(), HasDependencies {
         setContentView(R.layout.activity_base)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        val id = item?.itemId
+        val id = item.itemId
 
 
         if (id == android.R.id.home) {
